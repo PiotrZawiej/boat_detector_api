@@ -1,0 +1,33 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Boat Detector</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🚤 Boat Detector 🚤</h1>
+
+    <div class="file-wrapper">
+      <label for="fileInput" class="custom-file-label">Wybierz plik</label>
+      <span id="fileName" class="file-name">Nie wybrano pliku</span>
+      <input id="fileInput" type="file" accept="image/*" class="file-input-hidden" />
+    </div>
+
+    <button onclick="uploadImage()" class="button">Upload and Detect</button>
+    <p id="message" class="message"></p>
+
+    <div class="preview">
+      <p class="preview-label">Image preview:</p>
+      <img id="previewImage" src="#" alt="Preview" class="image hidden" />
+    </div>
+    <footer class="footer">
+        <p>&copy; Bartosz Żurek & Piotr Zawieja</p>
+    </footer>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+
+
+</html>

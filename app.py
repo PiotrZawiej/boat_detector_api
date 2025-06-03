@@ -4,11 +4,22 @@ import shutil
 import os
 from boat_detector import boat_detector
 import tempfile
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
+
+
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+
+@app.get("/", response_class=HTMLResponse)
+def get_index():
+    with open("frontend/index.html", encoding="utf-8") as f:
+        return f.read()
 
 @app.post("/upload")
 async def upload_image(file: UploadFile = File(...)):
