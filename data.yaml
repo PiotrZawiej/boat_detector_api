@@ -1,0 +1,5 @@
+train: boat/train
+val: boat/test
+
+nc: 1
+names: ['boat']
