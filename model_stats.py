@@ -3,7 +3,7 @@ import os
 import time
 import glob
 
-model_path = r"runs\weights\best.pt" 
+model_path = r"model\weights\best.pt" 
 test_folder = r"boat\test"
 
 model = YOLO(model_path)

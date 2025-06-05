@@ -31,7 +31,7 @@ async def upload_image(file: UploadFile = File(...)):
         output_path = os.path.join(UPLOAD_DIR, "detected_boat.jpg")
 
         boat_detector(
-            model_path=r"runs\weights\best.pt",
+            model_path=r"model\weights\best.pt",
             photo_path=tmp_path,
             output_path=output_path
         )

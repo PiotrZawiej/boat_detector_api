@@ -1,5 +1,5 @@
 train: boat/train
-val: boat/test
+val: boat/valid
 
-nc: 1
-names: ['boat']
+names:
+  0: boat
